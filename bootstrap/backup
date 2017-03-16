@@ -7,4 +7,8 @@ URL="/run/media/${USER}/backup/workstation.git"
 
 TARGET=${HOME}/data/workstation2
 
-git clone $URL ${TARGET} || cd ${TARGET} && git pull
+git clone $URL ${TARGET}
+cd ${TARGET}
+git pull
+
+./init
