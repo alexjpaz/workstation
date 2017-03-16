@@ -1,0 +1,4 @@
+#!/bin/bash
+
+curl -L https://storage.googleapis.com/minikube/releases/v0.17.0/minikube-linux-amd64 > /usr/local/bin/minikube
+chmod +x /usr/local/bin/minikube

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+dnf install -y git-all
+dnf update -y perl-Errno.x86_64

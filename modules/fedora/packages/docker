@@ -1,0 +1,11 @@
+#!/bin/bash
+dnf install -y docker
+dnf install -y socat
+systemctl enable docker
+
+groupadd docker
+gpasswd -a ${USER} docker 
+systemctl restart docker
+
+manual_step echo "Run `newgrp docker`"
+

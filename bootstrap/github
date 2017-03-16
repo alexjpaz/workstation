@@ -5,6 +5,10 @@ which git || "echo This script requires the 'git' command"
 
 URL="https://github.com/alexjpaz/workstation.git"
 
-TARGET=${HOME}/data/workstation2
+TARGET=${HOME}/data/workstation
 
-git clone $URL ${TARGET} || cd ${TARGET} && git pull
+git clone $URL ${TARGET}
+cd ${TARGET}
+git pull
+
+./init

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+curl -sL https://downloads.slack-edge.com/linux_releases/slack-2.5.1-0.1.fc21.x86_64.rpm > /tmp/slack.rpm
+
+yum  install -y /tmp/slack.rpm

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+dnf -y install gnome-tweak-tool
+
+git clone https://github.com/lundal/vibou.gTile.git ~/.local/share/gnome-shell/extensions/gTile@vibou

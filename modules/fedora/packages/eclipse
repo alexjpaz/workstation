@@ -1,0 +1,9 @@
+#!/bin/bash
+dnf install -y \
+	eclipse-color-theme \
+	eclipse-jdt \
+	eclipse-mpc eclipse-linuxtools \
+	java-1.8.0-openjdk \
+	java-1.8.0-openjdk-devel \
+	java-1.8.0-openjdk-javadoc \
+	java-1.8.0-openjdk-src

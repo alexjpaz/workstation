@@ -1,7 +1,27 @@
 #!/bin/bash
 set -x 
 
-git clone https://github.com/alexjpaz/workstation.git ${HOME}/data/workstation
+pushd ${0%/*}
 
-echo "hello"
-mkdir 
+modules=$@
+
+git remote remove github
+git remote add github 'git@github.com:alexjpaz/workstation.git'
+
+git remote remove origin
+git remote add origin "/run/media/${USER}/backup/workstation.git"
+
+TEMPDIR=$(mktemp -d)
+
+manual_step() {
+	echo $@ >> $TEMPDIR/manual_step
+}
+
+for module in $modules
+do
+	pushd modules/$module
+	./init
+	popd
+done
+
+cat $TEMPDIR/manual_step

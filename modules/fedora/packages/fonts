@@ -1,0 +1,5 @@
+#!/bin/bash
+dnf install -y dnf-plugins-core
+dnf copr enable -y  heliocastro/hack-fonts
+dnf install -y hack-fonts
+dnf install -y google-droid-sans-mono-fonts dejavu-sans-mono-fonts 

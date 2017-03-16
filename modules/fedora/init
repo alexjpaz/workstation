@@ -1,0 +1,17 @@
+#!/bin/bash
+pushd ${0%/*}
+
+packages/broadcom-wl
+packages/google-chrome
+packages/vim
+packages/git
+packages/jq
+packages/docker
+packages/npm
+packages/yarn
+packages/eclipse
+packages/fonts
+packages/minikube
+packages/nvidia
+packages/openjdk
+packages/tmux
