@@ -1,0 +1,4 @@
+#!/bin/bash
+cp current.txt current.old.txt
+dconf dump / > current.txt
+diff -u current.old.txt current.txt
