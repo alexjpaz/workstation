@@ -1,0 +1,8 @@
+#!/bin/bash
+
+cat << EOF > ${HOME}/.gitignore_global
+*.secret
+*.sw[poa]
+EOF
+
+git config --global core.excludesfile ~/.gitignore_global
