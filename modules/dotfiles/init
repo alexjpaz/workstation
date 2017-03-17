@@ -6,7 +6,7 @@ DOTFILES=${PWD}
 
 ${DOTFILES}/init.d/git/init
 
-ln -sf ${DOTFILES}/.gitconfig ${HOME}/.gitconfig
+ln -sf ${DOTFILES}/files/gitconfig ${HOME}/.gitconfig
 ln -sf ${DOTFILES}/files/bashrc ${HOME}/.bashrc
 ln -sf ${DOTFILES}/files/tmux.conf ${HOME}/.tmux.conf
 
