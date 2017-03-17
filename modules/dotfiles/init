@@ -1,0 +1,15 @@
+#!/bin/bash
+#set -x
+set -e
+
+DOTFILES=${PWD}
+
+${DOTFILES}/init.d/git/init
+
+ln -sf ${DOTFILES}/.gitconfig ${HOME}/.gitconfig
+ln -sf ${DOTFILES}/files/bashrc ${HOME}/.bashrc
+ln -sf ${DOTFILES}/files/tmux.conf ${HOME}/.tmux.conf
+
+# verify
+which vim || "vim not installed!"
+vim --version | grep '+visualextra' || "vim does not have the sexy features I use!"

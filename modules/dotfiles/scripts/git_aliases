@@ -1,0 +1,20 @@
+#!/bin/bash
+set -x
+set -e
+
+config() {
+ git config --global --replace-all "$@"
+}
+
+config alias.co checkout
+config alias.st status
+config alias.sts 'status -s .'
+config alias.stu 'status -unos'
+config alias.d 'diff HEAD'
+config alias.ds 'diff --name-status'
+config alias.dd 'diff --cached HEAD'
+config alias.dc 'diff --cached'
+config alias.tree 'log --decorate --graph --abbrev-commit --oneline'
+config alias.forest 'log --decorate --graph --abbrev-commit --oneline --all'
+config alias.f '!git forest'
+

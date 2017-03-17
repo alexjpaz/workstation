@@ -1,0 +1,24 @@
+[user]
+	name = Alexander Paz
+	email = alexjpaz@gmail.com
+[alias]
+	co = checkout
+	st = status
+	f = !git forest
+	t = !git tree
+	fall = fetch --all
+	d = diff HEAD
+	ds = diff --name-status
+	dc = diff --cached
+	sts = status -s .
+	stu = status -unos
+	dd = diff --cached HEAD
+	tree = log --decorate --graph --abbrev-commit --oneline
+	forest = log --decorate --graph --abbrev-commit --oneline --all
+	aa = add -u
+	p = pull --rebase
+	vimp = !vim -p $(git diff --name-only)
+[core]
+	excludesfile = /home/apaz/.gitignore_global
+[push]
+	default = simple

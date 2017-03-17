@@ -4,3 +4,4 @@ cd ..
 
 fedora/init
 vim/init
+dotfiles/init
