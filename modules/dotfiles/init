@@ -4,7 +4,7 @@ set -e
 
 DOTFILES=${PWD}
 
-${DOTFILES}/init.d/git/init
+${DOTFILES}/init.d/git
 
 ln -sf ${DOTFILES}/files/gitconfig ${HOME}/.gitconfig
 ln -sf ${DOTFILES}/files/bashrc ${HOME}/.bashrc
