@@ -33,6 +33,9 @@ Plug 'vim-syntastic/syntastic'
 
 " Javascript
 Plug 'leafgarland/typescript-vim'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'Quramy/tsuquyomi'
+
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'einars/js-beautify'

@@ -4,3 +4,5 @@ dnf install -y \
 	node-gyp \
 
 npm install -g typescript
+npm install -g tslint
+npm install -g jshint
