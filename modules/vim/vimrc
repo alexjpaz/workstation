@@ -28,9 +28,11 @@ Plug 'plasticboy/vim-markdown'
 Plug 'avakhov/vim-yaml'
 
 " Syntastic
-Plug 'scrooloose/syntastic'
+" Plug 'scrooloose/syntastic'
+Plug 'vim-syntastic/syntastic'
 
 " Javascript
+Plug 'leafgarland/typescript-vim'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'einars/js-beautify'
@@ -39,7 +41,6 @@ Plug 'chrisbra/Colorizer'
 Plug 'kchmck/vim-coffee-script'
 Plug 'juvenn/mustache.vim'
 Plug 'jimmyhchan/dustjs.vim'
-Plug 'leafgarland/typescript-vim'
 
 "SnipMate
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -49,6 +50,9 @@ Plug 'honza/vim-snippets'
 
 " Go
 Plug 'fatih/vim-go'
+
+" Other
+Plug 'Valloric/ListToggle'
 
 call plug#end()
 
