@@ -1,6 +1,15 @@
 #!/bin/bash
 
 echo "Setting scaling factor"
+
+gsettings_gnome_termial() {
+	local key=$1
+	local value=$2
+	local profile=$(gsettings get org.gnome.Terminal.ProfilesList default)
+	local profile=${profile:1:-1} # remove leading and trailing single quotes
+	gsettings set "org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$profile/" $key $value
+}
+
 gsettings set org.gnome.desktop.interface scaling-factor 1
 
 gsettings set org.gnome.desktop.wm.keybindings toggle-fullscreen "['<Super>Up']"
@@ -8,9 +17,18 @@ gsettings set org.gnome.desktop.wm.keybindings maximize "[]"
 
 gsettings set org.gnome.desktop.interface clock-show-date true
 gsettings set org.gnome.desktop.interface clock-format "12h"
-gsettings set org.gtk.settings/file-chooser clock-format "12h"
+gsettings set org.gtk.settings.file-chooser clock-format "12h"
 
 gsettings set org.gnome.settings-daemon.plugins.media-keys area-screenshot-clip "['<Shift><Super>dollar']"
+
+gsettings set org.gnome.terminal.legacy.keybindings zoom-in '<Primary>equal'
+gsettings set org.gnome.terminal.legacy default-show-menubar 'false'
+
+gsettings_gnome_termial use-system-font 'false'
+gsettings_gnome_termial font 'Hack 12'
+gsettings_gnome_termial audible-bell 'false'
+
+
 
 
 echo "Fix MaxBook fn"
