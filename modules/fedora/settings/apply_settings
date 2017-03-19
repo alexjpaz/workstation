@@ -10,5 +10,8 @@ gsettings set org.gnome.desktop.interface clock-show-date true
 gsettings set org.gnome.desktop.interface clock-format "12h"
 gsettings set org.gtk.settings/file-chooser clock-format "12h"
 
+gsettings set org.gnome.settings-daemon.plugins.media-keys area-screenshot-clip "['<Shift><Super>dollar']"
+
+
 echo "Fix MaxBook fn"
 echo 2 >> /sys/module/hid_apple/parameters/fnmode

@@ -7,6 +7,7 @@ packages/vim
 packages/git
 packages/jq
 packages/docker
+packages/docker-compose
 packages/npm
 packages/yarn
 packages/eclipse
