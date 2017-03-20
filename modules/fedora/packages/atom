@@ -1,0 +1,3 @@
+#!/bin/bash
+curl -sL 'https://github.com/atom/atom/releases/download/v1.11.1/atom.x86_64.rpm' > /tmp/atom.rpm
+dnf install -y /tmp/atom.rpm
