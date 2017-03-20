@@ -1,0 +1,5 @@
+#!/bin/bash
+pushd ${0%/*}
+
+cp ./kworker-fix /usr/bin/kworker-fix
+cp ./kworker-fix.service /etc/systemd/system/kworker-fix.service

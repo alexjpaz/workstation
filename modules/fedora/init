@@ -18,3 +18,6 @@ packages/openjdk
 packages/tmux
 
 settings/apply_settings
+
+systemd/kworker-fix/install
+

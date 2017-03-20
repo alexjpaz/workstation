@@ -1,0 +1,8 @@
+#!/bin/bash
+if [[ $UID -ne 0 ]]; then
+	echo "Please run as root."
+	exit 1
+fi
+echo "disable" > /sys/firmware/acpi/interrupts/gpe17
+echo "disable" > /sys/firmware/acpi/interrupts/gpe16
+echo "disable" > /sys/firmware/acpi/interrupts/sci
