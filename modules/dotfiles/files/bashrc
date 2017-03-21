@@ -29,3 +29,8 @@ go_controllo() {
 alias vi='vim'
 
 alias http='python -m SimpleHTTPServer 8000'
+
+for script in $(find $HOME/.bash.d -executable -type f)
+do
+	source ${script}
+done

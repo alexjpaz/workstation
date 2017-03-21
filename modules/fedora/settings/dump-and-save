@@ -1,0 +1,5 @@
+#!/bin/bash
+
+./dump
+git add --all .
+git commit -m "dump $(date +%Y%m%d-%H%M%S)"

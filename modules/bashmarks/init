@@ -4,4 +4,7 @@ git clone git://github.com/huyng/bashmarks.git /tmp/bashmarks
 pushd /tmp/bashmarks
 make install
 
-echo "source ~/.local/bin/bashmarks.sh" >> ~/.bashrc
+
+mkdir ${HOME}/.bash.d
+ln -s ~/.local/bin/bashmarks.sh ${HOME}/.bash.d
+chmod +x ${HOME}/.bash.d/bashmarks.sh
