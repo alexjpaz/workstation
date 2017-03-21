@@ -30,7 +30,9 @@ alias vi='vim'
 
 alias http='python -m SimpleHTTPServer 8000'
 
-for script in $(find $HOME/.bash.d -executable -type f)
+for script in $(find $HOME/.bash.d -executable)
 do
-	source ${script}
+	if [[ ! -d ${script} ]]; then
+		source ${script}
+	fi
 done
