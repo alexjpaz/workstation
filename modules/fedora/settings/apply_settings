@@ -32,4 +32,9 @@ gsettings_gnome_termial audible-bell 'false'
 
 
 echo "Fix MaxBook fn"
-echo 2 >> /sys/module/hid_apple/parameters/fnmode
+FN_KEYS_MODULE=/etc/sysconfig/modules/fn_keys_fix.modules
+cat << EOF > ${FN_KEYS_MODULE}
+#!/bin/sh
+echo 2 > /sys/module/hid_apple/parameters/fnmode
+EOF
+chmod +x ${FN_KEYS_MODULE}
