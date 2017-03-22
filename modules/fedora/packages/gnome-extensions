@@ -2,4 +2,6 @@
 
 dnf -y install gnome-tweak-tool
 
-git clone https://github.com/lundal/vibou.gTile.git ~/.local/share/gnome-shell/extensions/gTile@vibou
+#git clone https://github.com/lundal/vibou.gTile.git ~/.local/share/gnom-shell/extensions/gTile@vibou
+git clone https://github.com/negesti/gnome-shell-extensions-negesti ~/.local/share/gnome-shell/extensions/putWindows@clemens.lab21.org
+
