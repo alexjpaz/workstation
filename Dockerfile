@@ -1,7 +1,8 @@
 FROM fedora:25
 
 RUN dnf install -y \
-	which
+	which \
+	git
 
 ADD . /build
 
