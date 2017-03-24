@@ -1,0 +1,7 @@
+#!/bin/bash
+dnf install -y hub
+
+#mkdir -p /opt/hub
+#pushd /opt/hub
+#curl -sL https://github.com/github/hub/releases/download/v2.3.0-pre9/hub-linux-amd64-2.3.0-pre9.tgz | tar xz
+#ln -sf /opt/hub/hub-linux-amd64-2.3.0-pre9.tgz/bin/hub /usr/bin/hub 
