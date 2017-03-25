@@ -1,7 +1,0 @@
-#!/bin/bash
-
-cd ..
-
-fedora/init
-vim/init
-dotfiles/init

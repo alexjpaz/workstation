@@ -6,6 +6,6 @@ RUN dnf install -y \
 
 ADD . /build
 
-RUN /build/init default
+RUN /build/setup default
 
 ENTRYPOINT ["/build/test.sh"]
