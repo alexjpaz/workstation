@@ -14,6 +14,6 @@ vim +PlugInstall +qa
 
 mkdir -p ~/.vim/plugin
 
-ln -sf ${PWD}/plugin/apaz ${HOME}/.vim/plugin/apaz
+ln -sfn ${PWD}/plugin/apaz ${HOME}/.vim/plugin/apaz
 
 
