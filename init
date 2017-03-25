@@ -1,6 +1,10 @@
 #!/bin/bash
 set -x 
 
+export USER=${USER}
+
+sudo echo "Root!!!!!!!"
+
 pushd ${0%/*}
 
 modules=$@
@@ -20,7 +24,17 @@ manual_step() {
 for module in $modules
 do
 	pushd modules/$module
-	./init
+		if [[ -x "./setup-user" ]]; then
+			./setup-user
+		fi
+
+		if [[ -x "./setup-root" ]]; then
+			sudo ./setup-root
+		fi
+
+		if [[ -x "./setup-root" ]]; then
+			echo "Init is deprecated, use setup-root or setup-user"
+		fi
 	popd
 done
 
