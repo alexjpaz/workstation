@@ -1,50 +1,32 @@
 #!/bin/bash
-set -x 
-
-export USER=${USER}
-
-
 pushd ${0%/*}
 
-modules=$@
+CMD=${1:-setup}
+shift 1
+ARGS=$@
 
-if [[ "${modules}" == "" ]]; then
-	echo "Reading from manifest"
-	modules=$(cat ./manifest)
-fi
+set -e
 
+source manifest 
 
-sudo echo "Root!!!!!!!"
+task-setup() {
+	for module in ${WORKSTATION_MODULES}
+	do
+		echo $module $WORKSTATION_USER
+		pushd modules/$module
+			if [[ -x "./setup-root" ]]; then
+				./setup-root
+			fi
 
-git remote remove github
-git remote add github 'git@github.com:alexjpaz/workstation.git'
+			if [[ -x "./setup-user" ]]; then
+				su -c ./setup-user ${WORKSTATION_USER}
+			fi
+		popd
+	done
 
-git remote remove origin
-git remote add origin "/run/media/${USER}/backup/workstation.git"
-
-TEMPDIR=$(mktemp -d)
-
-manual_step() {
-	echo $@ >> $TEMPDIR/manual_step
+	if [[ -e "/tmp/workstation.manual_steps" ]]; then
+		cat "/tmp/workstation.manual_steps"
+	fi
 }
 
-for module in $modules
-do
-	pushd modules/$module
-		if [[ -x "./setup-user" ]]; then
-			./setup-user
-		fi
-
-		if [[ -x "./setup-root" ]]; then
-			sudo ./setup-root
-		fi
-
-		if [[ -x "./setup-root" ]]; then
-			echo "Init is deprecated, use setup-root or setup-user"
-		fi
-	popd
-done
-
-if [[ -e "/tmp/workstation.manual_steps" ]]; then
-	cat "/tmp/workstation.manual_steps"
-fi
+task-$CMD $ARGS

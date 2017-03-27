@@ -1,5 +1,7 @@
 dockerTag=alexjpaz.com/workstation
 
 build:
-	docker build -t $(dockerTag) .
-	docker run $(dockerTag) test
+	docker build --build-arg WORKSTATION_USER=datboi -t $(dockerTag) .
+
+test:
+	docker run $(dockerTag)

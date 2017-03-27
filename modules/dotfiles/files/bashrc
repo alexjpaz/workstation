@@ -20,6 +20,15 @@ go_controllo() {
 	cd ~/code/controllo/controllo
 }
 
+http() {
+	local port=${1:-8000}
+	python -m SimpleHTTPServer $
+}
+
+dkr-fedora() {
+	docker run -it fedora:25 /bin/bash
+}
+
 #export DOCKER_HOST=tcp://localhost:2376
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
@@ -27,8 +36,6 @@ go_controllo() {
 
 # User specific aliases and functions
 alias vi='vim'
-
-alias http='python -m SimpleHTTPServer 8000'
 
 for script in $(find $HOME/.bash.d -executable)
 do

@@ -22,14 +22,12 @@ gsettings set org.gtk.settings.file-chooser clock-format "12h"
 gsettings set org.gnome.settings-daemon.plugins.media-keys area-screenshot-clip "['<Shift><Super>dollar']"
 
 gsettings set org.gnome.terminal.legacy.keybindings zoom-in '<Primary>equal'
-gsettings set org.gnome.terminal.legacy default-show-menubar 'false'
 
 gsettings_gnome_termial use-system-font 'false'
 gsettings_gnome_termial font 'Hack 12'
 gsettings_gnome_termial audible-bell 'false'
 
-
-
+gsettings set org.gnome.Terminal.Legacy.Settings:/org/gnome/terminal/legacy 'false'
 
 echo "Fix MaxBook fn"
 FN_KEYS_MODULE=/etc/sysconfig/modules/fn_keys_fix.modules

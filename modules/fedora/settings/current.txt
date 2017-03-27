@@ -1,43 +1,26 @@
-[org/gnome/settings-daemon/plugins/media-keys]
-area-screenshot-clip='<Shift><Super>dollar'
-
-[org/gnome/settings-daemon/peripherals/keyboard]
-numlock-state='on'
-
-[org/gnome/shell]
-favorite-apps=['evolution.desktop', 'rhythmbox.desktop', 'shotwell.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Software.desktop']
-
-[org/gnome/gedit/preferences/ui]
-show-tabs-mode='auto'
-
-[org/gnome/gedit/plugins/filebrowser]
-virtual-root='file:///home/apaz/code/controllo/controllo/src/main/dist/stacks/abd-qa-r4'
-tree-view=true
-root='file:///'
-
-[org/gnome/gedit/plugins]
-active-plugins=['time', 'spell', 'modelines', 'filebrowser', 'docinfo']
-
-[org/gnome/gedit/state/window]
-size=(900, 700)
-state=128
-bottom-panel-size=140
-side-panel-size=200
-side-panel-active-page='GeditWindowDocumentsPanel'
-
-[org/gnome/nautilus/preferences]
-default-folder-viewer='icon-view'
-search-filter-time-type='last_modified'
-
 [org/gnome/system/location]
 enabled=true
+
+[org/gnome/software]
+check-timestamp=int64 1490555196
+
+[org/gnome/settings-daemon/plugins/media-keys]
+area-screenshot-clip="['<Shift><Super>dollar']"
+
+[org/gnome/settings-daemon/peripherals/keyboard]
+numlock-state='off'
+
+[org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+use-system-font=false
+audible-bell=false
+
+[org/gnome/terminal/legacy]
+schema-version=uint32 3
+default-show-menubar=false
 
 [org/gnome/evolution-data-server]
 network-monitor-gio-name=''
 migrated=true
-
-[org/gnome/desktop/a11y/magnifier]
-mag-factor=3.0
 
 [org/gnome/desktop/app-folders]
 folder-children=['Utilities', 'Sundry']
@@ -55,22 +38,19 @@ apps=['alacarte.desktop', 'authconfig.desktop', 'ca.desrt.dconf-editor.desktop',
 name='X-GNOME-Sundry.directory'
 
 [org/gnome/desktop/notifications]
-application-children=['abrt-applet', 'org-gnome-nautilus', 'org-gnome-terminal', 'slack', 'org-gnome-software']
-
-[org/gnome/desktop/notifications/application/org-gnome-software]
-application-id='org.gnome.Software.desktop'
+application-children=['abrt-applet', 'org-gnome-software', 'org-gnome-terminal']
 
 [org/gnome/desktop/notifications/application/org-gnome-terminal]
 application-id='org.gnome.Terminal.desktop'
 
-[org/gnome/desktop/notifications/application/slack]
-application-id='slack.desktop'
-
 [org/gnome/desktop/notifications/application/abrt-applet]
 application-id='abrt-applet.desktop'
 
-[org/gnome/desktop/notifications/application/org-gnome-nautilus]
-application-id='org.gnome.Nautilus.desktop'
+[org/gnome/desktop/notifications/application/org-gnome-software]
+application-id='org.gnome.Software.desktop'
+
+[org/gnome/desktop/privacy]
+report-technical-problems=true
 
 [org/gnome/desktop/interface]
 clock-show-date=true
@@ -87,34 +67,3 @@ xkb-options=@as []
 [org/gnome/desktop/wm/keybindings]
 maximize=@as []
 toggle-fullscreen=['<Super>Up']
-
-[org/gnome/desktop/privacy]
-report-technical-problems=true
-
-[org/gnome/terminal/legacy/keybindings]
-zoom-in='<Primary>equal'
-
-[org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
-use-system-font=false
-audible-bell=false
-font='Hack 12'
-
-[org/gnome/terminal/legacy]
-schema-version=uint32 3
-default-show-menubar=false
-
-[org/gnome/software]
-check-timestamp=int64 1489950397
-
-[org/gtk/settings/file-chooser]
-sort-column='name'
-clock-format='12h'
-sidebar-width=155
-window-position=(781, 432)
-show-size-column=true
-show-hidden=false
-window-size=(1203, 1042)
-sort-directories-first=false
-date-format='regular'
-sort-order='ascending'
-location-mode='path-bar'
