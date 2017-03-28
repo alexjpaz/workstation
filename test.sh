@@ -2,5 +2,10 @@
 set -e
 set -x
 
-which vim
-which butt
+sudo -c 'which docker' $WORKSTATION_USER
+
+vim --version | grep '+visualextra'
+
+cat ~/.gitconfig | grep 'forest'
+
+
