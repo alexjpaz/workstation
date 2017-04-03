@@ -2,6 +2,7 @@
 	name = Alexander Paz
 	email = alexjpaz@gmail.com
 [alias]
+	add-non-white-space = !sh -c 'git diff -U0 -w --no-color -- \"$@\" | git apply --cached --ignore-whitespace --unidiff-zero "#"'
 	co = checkout
 	st = status
 	f = !git forest
