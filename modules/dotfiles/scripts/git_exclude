@@ -2,7 +2,7 @@
 
 cat << EOF > ${HOME}/.gitignore_global
 *.secret
-*.sw[poa]
+*.sw[poan]
 EOF
 
 git config --global core.excludesfile ~/.gitignore_global
