@@ -1,6 +1,7 @@
 [user]
 	name = Alexander Paz
 	email = alexjpaz@gmail.com
+	signingkey = 0793FE7D
 [alias]
 	add-non-white-space = !sh -c 'git diff -U0 -w --no-color -- \"$@\" | git apply --cached --ignore-whitespace --unidiff-zero "#"'
 	co = checkout
@@ -18,8 +19,13 @@
 	forest = log --decorate --graph --abbrev-commit --oneline --all
 	aa = add -u
 	p = pull --rebase
+	pp = !git p && git push
 	vimp = !vim -p $(git diff --name-only)
 [core]
 	excludesfile = /home/apaz/.gitignore_global
 [push]
 	default = current
+[commit]
+	#gpgsign = true
+[branch]
+	autoSetupMerge = always
