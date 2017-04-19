@@ -28,4 +28,4 @@
 [commit]
 	#gpgsign = true
 [branch]
-	autoSetupMerge = always
+	;autoSetupMerge = always

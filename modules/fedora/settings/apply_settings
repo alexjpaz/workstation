@@ -29,6 +29,10 @@ gsettings_gnome_termial audible-bell 'false'
 
 gsettings set org.gnome.Terminal.Legacy.Settings:/org/gnome/terminal/legacy 'false'
 
+gsettings set org.gnome.Terminal.Legacy.Settings:/org/gnome/terminal/legacy 'false'
+
+gsettings set org.gnome.desktop.background picture-uri 'https://lh3.googleusercontent.com/q7fPv9pFZ5CtSsLPSBut_p8hbJsjBZ0XRlzHjQnxNVvwgnWzD2STtZHHxAvDzew3D6bxlWjnjii1GihQi0ukgqJEwWBdV9wVhaEPRF1-KdZbosIO06Rzbbe1WIimZJswKKy3pdJj_Y9AwsVT_ManpRQowy1iUTjeprgr_00iZBwxnXPnIyxa3sbOBMk1h1U0BMr19YvGbi0ZgXfaKOuFwcoJw_lVYrLD1-cJ6rv0oSD1cAgsyUUrpcY_KshZw3wCE0CrmBOup9mA_fH0b0kVX1C5AT1Rd47SKnlp273K3rnGWvYTv4pGMJQOEsd8mPLKbwETackv3jOSEvSauM_LrMFS4lNg3RG0xhjg6ih70-6IsXXID4jdad3bB5owvgD_4KUkaQ4Q9-gtzu-ou6BJGzDKnYV6jvrTEvxz2d5FMxSV6QECgeAkIkTQX3KuW8BMpBNUwsUU-lchZ1J5e_su9fgtEf2xuIlgQ2cve4JA31vmVMsbqXkG2yhQwVgPZ1_VzHMMFkSDF6pSEvpx5kT3DqNv-4dxsLCElRiFGHJlMeBevlaC77REdNwM2TR91eTdtE9QTQhXYJq3uHefwGxXLANu8RotmfpYgtbDKsAg4gdvgaTCrmQapA=w722-h1107-no'
+
 echo "Fix MaxBook fn"
 FN_KEYS_MODULE=/etc/sysconfig/modules/fn_keys_fix.modules
 cat << EOF > ${FN_KEYS_MODULE}
