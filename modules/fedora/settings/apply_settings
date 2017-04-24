@@ -40,3 +40,18 @@ cat << EOF > ${FN_KEYS_MODULE}
 echo 2 > /sys/module/hid_apple/parameters/fnmode
 EOF
 chmod +x ${FN_KEYS_MODULE}
+
+
+gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']"
+
+custom-keybinding() {
+	local number=$1
+	local binding=$2
+	local command=$3
+
+	gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybindings:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom$number binding $binding
+	gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybindings:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom$number command $command
+}
+
+custom-keybinding 0 '<Alt><Super>MonBrightnessUp' '/home/apaz/.local/bin/soundboard ghost-with-a-boner'
+custom-keybinding 1 '<Alt><Super>MonBrightnessDown' '/home/apaz/.local/bin/soundboard beeeeedeeedeee'

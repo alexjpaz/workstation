@@ -45,3 +45,4 @@ do
 done
 
 export EDITOR=vim
+export GOPATH=$HOME/go

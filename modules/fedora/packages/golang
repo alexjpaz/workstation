@@ -1,0 +1,9 @@
+#!/bin/bash
+echo $WORKSTATION_USER
+dnf install -y golang
+
+as_user mkdir -p $WORKSTATION_USER/go \
+	&& mkdir -p $WORKSTATION_USER/.bash.d \
+	&& echo 'export GOPATH=$HOME/go' >> $WORKSTATION_USER/.bash.d/GOPATH \
+	&& chmod 700 $WORKSTATION_USER/.bash.d/GOPATH
+

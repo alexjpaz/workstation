@@ -1,0 +1,12 @@
+#!/bin/bash
+
+temp=$(mktemp -d)
+
+eclim_version='2.6.0'
+
+curl -sL https://github.com/ervandew/eclim/releases/download/${eclim_version}/eclim_${eclim_version}.jar > $temp/eclim_${eclim_version}.jar
+
+java \
+  -Dvim.files=$HOME/.vim \
+  -Declipse.home=/usr/lib64/eclipse/ \
+  -jar $temp/eclim_${eclim_version}.jar install

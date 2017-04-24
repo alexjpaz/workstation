@@ -1,0 +1,3 @@
+#!/bin/bash
+echo root
+exit 5
