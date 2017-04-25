@@ -6,3 +6,4 @@ dnf install -y \
 npm install -g typescript
 npm install -g tslint
 npm install -g jshint
+npm install -g eslint
