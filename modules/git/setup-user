@@ -1,0 +1,5 @@
+#!/bin/bash
+
+mkdir ${HOME}/.bash.d
+ln -s ~/.local/bin/bashmarks.sh ${HOME}/.bash.d
+chmod +x ${HOME}/.bash.d/bashmarks.sh

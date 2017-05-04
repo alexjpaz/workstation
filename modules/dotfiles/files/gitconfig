@@ -22,6 +22,7 @@
 	pp = !git p && git push
 	vimp = !vim -p $(git diff --name-only)
 	merge-squash = "!f() { git merge --squash $@ && git commit -v; }; f"
+	replace = '!git-replace'
 [core]
 	excludesfile = /home/apaz/.gitignore_global
 [push]
