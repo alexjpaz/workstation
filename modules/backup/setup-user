@@ -1,0 +1,11 @@
+#!/bin/bash
+set -x 
+
+pushd ${0%/*}
+
+cp ./files/* ~/.config/systemd/user/
+
+systemctl --user enable backup-code.timer
+systemctl --user enable backup-code.service
+
+

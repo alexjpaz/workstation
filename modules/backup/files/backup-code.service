@@ -1,0 +1,9 @@
+[Unit]
+Description=Run backup on code once a day
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/rsync -avPi /home/apaz/code /run/media/apaz/backup/code
+
+[Install]
+WantedBy=default.target

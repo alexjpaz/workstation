@@ -6,5 +6,6 @@ WORKSTATION_MODULES=${WORKSTATION_MODULES:-
 	dotfiles
 	bashmarks
 	atom
+    backup
 }
 set +a
