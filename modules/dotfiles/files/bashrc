@@ -22,7 +22,7 @@ go_controllo() {
 
 http() {
 	local port=${1:-8000}
-	python -m SimpleHTTPServer $
+	python -m SimpleHTTPServer ${port}
 }
 
 dkr-fedora() {

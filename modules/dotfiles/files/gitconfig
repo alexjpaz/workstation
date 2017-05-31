@@ -21,8 +21,11 @@
 	p = pull --rebase
 	pp = !git p && git push
 	vimp = !vim -p $(git diff --name-only)
-	merge-squash = "!f() { git merge --squash $@ && git commit -v; }; f"
+	merge-squash = "!f() { git merge --squash $@ && git commit -m \"Merge-squashed $@\"; }; f"
 	replace = '!git-replace'
+    fixup = !git commit --fixup HEAD
+    af = "!f() { git aa && git commit --fixup HEAD; }; f"
+
 [core]
 	excludesfile = /home/apaz/.gitignore_global
 [push]
