@@ -1,6 +1,7 @@
 set -a 
 WORKSTATION_USER=${WORKSTATION_USER:-1000}
 WORKSTATION_MODULES=${WORKSTATION_MODULES:-
+    ansible
 	fedora
 	vim
 	dotfiles
