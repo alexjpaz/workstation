@@ -1,0 +1,6 @@
+{
+    "window.zoomLevel": 4,
+    "workbench.colorTheme": "Dracula",
+    "vim.disableAnnoyingNeovimMessage": true,
+    "window.menuBarVisibility": "toggle"
+}
