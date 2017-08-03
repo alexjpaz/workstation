@@ -36,6 +36,7 @@ dkr-fedora() {
 
 # User specific aliases and functions
 alias vi='vim'
+alias docker-ps-ids="docker ps --format 'table {{.ID}}\t{{.Names}}'"
 
 for script in $(find $HOME/.bash.d -executable)
 do
@@ -46,3 +47,10 @@ done
 
 export EDITOR=vim
 export GOPATH=$HOME/go
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /home/apaz/code/github.com/serverless-roll/node_modules/tabtab/.completions/serverless.bash ] && . /home/apaz/code/github.com/serverless-roll/node_modules/tabtab/.completions/serverless.bash
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /home/apaz/code/github.com/serverless-roll/node_modules/tabtab/.completions/sls.bash ] && . /home/apaz/code/github.com/serverless-roll/node_modules/tabtab/.completions/sls.bash
