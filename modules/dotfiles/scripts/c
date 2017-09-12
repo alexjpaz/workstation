@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+CODE_DIR="$HOME/code"
+
+function c() {
+    results=( $(find $CODE_DIR -iname '*.git' | grep '/.git$' | grep $1 | sed "s@$CODE_DIR/@@" | sed "s@/.git@@" | tail -5) )
+    if [[ ${#results[@]} == 0 ]]; then
+        echo "No matching projects for $1"
+    elif [[ ${#results[@]} == 1 ]]; then
+        pushd $CODE_DIR/$results
+    else
+        len=${#results[@]}
+
+        for (( i=0; i<${len}; i++ ));
+        do
+            echo "$(($i + 1)). ${results[$i]}"
+        done
+        echo -n "Choose a project (1-5): "
+        read -n 1 PICK
+        echo
+        pushd $CODE_DIR/${results[$((PICK - 1))]}
+    fi
+}
+
+#vim:syntax=sh
