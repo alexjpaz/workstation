@@ -1,6 +1,7 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
 
+set bs=2
 set ts=4
 set sw=4
 
