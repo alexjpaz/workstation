@@ -6,9 +6,13 @@ DOTFILES=${PWD}
 
 ${DOTFILES}/init.d/git
 
+mkdir -p ${HOME}/bash.d
+
 ln -sf ${DOTFILES}/files/gitconfig ${HOME}/.gitconfig
 ln -sf ${DOTFILES}/files/bashrc ${HOME}/.bashrc
 ln -sf ${DOTFILES}/files/tmux.conf ${HOME}/.tmux.conf
+ln -sf ${DOTFILES}/bash.d/c ${HOME}/.bash.d/
+
 
 # verify
 which vim || "vim not installed!"
