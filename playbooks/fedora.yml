@@ -4,6 +4,8 @@
     workstation_user: apaz
     isOSX: true
   tasks:
+    - name: create admin user
+      action: user name={{ workstation_user }} group=1000 state=present
     - include: "{{ item }}/tasks.yml"
       with_items:
         - bashrc

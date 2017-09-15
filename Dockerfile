@@ -1,7 +1,7 @@
 FROM fedora:25
 
 RUN dnf install -y \
-	which \
+	which \ 
 	git
 
 
@@ -9,8 +9,11 @@ ARG WORKSTATION_USER
 
 RUN useradd -m -u 1000 datboi
 
+RUN dnf install -y ansible
 ADD . /build
 
-RUN /build/bootstrap/fedora
+
+WORKDIR /build
+RUN bootstrap/fedora
 
 ENTRYPOINT ["/build/test.sh"]

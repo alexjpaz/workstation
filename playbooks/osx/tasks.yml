@@ -1,6 +1,6 @@
 ---
 - package:
-  name: bash-completion
+    name: bash-completion
 - package:
-  name: coreutils
+    name: coreutils
 
