@@ -55,6 +55,10 @@ Plug 'honza/vim-snippets'
 " Go
 Plug 'fatih/vim-go'
 
+" Python
+Plug 'vim-scripts/indentpython.vim'
+Plug 'Vimjas/vim-python-pep8-indent'
+
 " Other
 Plug 'Valloric/ListToggle'
 

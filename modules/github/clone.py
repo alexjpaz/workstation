@@ -11,9 +11,12 @@ repos = {
     "alexjpaz": [
         "docker-toolbox",
         "liftit",
-        "prathu"
+        "prathu",
 
     ],
+    "alexjpaz-playground": [
+        "ci-cd-examples"
+    ]
 }
 
 

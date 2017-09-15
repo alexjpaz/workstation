@@ -50,7 +50,7 @@ export GOPATH=$HOME/go
 
 if [[ $(uname) == "Darwin" ]];
 then
-    alias ls='ls -G'
+    alias ls='gls --color=auto'
 fi
 
 # tabtab source for serverless package
