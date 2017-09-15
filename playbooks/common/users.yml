@@ -1,0 +1,4 @@
+---
+- hosts: all
+  vars:
+    workstation_user: apaz

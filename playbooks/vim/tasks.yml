@@ -1,0 +1,20 @@
+---
+- name: Install Vim 
+  package:
+    name: vim
+
+- name: Configure Vim
+  copy:
+    src: ./.vimrc
+    dest: "~{{workstation_user}}/.vimrc"
+    owner: "{{workstation_user}}"
+    mode: 0700
+
+- name: Install Plug.vim
+  get_url:
+    url: "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
+    dest: "~{{workstation_user}}/.vim/autoload/plug.vim"
+
+- name: Install Vim Plugins
+  command: vim +PlugInstall +qa
+

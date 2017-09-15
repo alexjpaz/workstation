@@ -1,0 +1,13 @@
+---
+- hosts: all
+  vars:
+    workstation_user: apaz
+    isOSX: true
+  tasks:
+    - include: test/1.yml
+    - include: vim/tasks.yml
+    - package:
+        name: bash-completion
+    - package:
+        name: coreutils
+
