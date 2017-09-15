@@ -1,0 +1,11 @@
+---
+- name: Copy .bashrc 
+  copy:
+    src: ./bashrc
+    dest: "~{{workstation_user}}/.bashrc"
+
+- name: Copy bashrc fragments
+  copy:
+    src: ./bash.d/
+    mode: u+rx
+    dest: "~{{workstation_user}}/.bash.d/"
