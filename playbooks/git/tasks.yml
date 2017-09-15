@@ -12,3 +12,10 @@
   template:
     src: ./gitconfig
     dest: "~{{workstation_user}}/.gitconfig"
+
+- name: Create .gitignore_global
+  copy:
+    content: |
+      *.secret
+      *.sw[poan]
+    dest: "~{{workstation_user}}/.gitignore_global"
