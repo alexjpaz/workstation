@@ -1,0 +1,14 @@
+---
+- name: Install git
+  package:
+    name: git
+
+- name: Add git-replace script
+  copy:
+    src: ./git-replace
+    dest: "~{{workstation_user}}/.bash.d/git-replace"
+
+- name: Create .gitconfig
+  template:
+    src: ./gitconfig
+    dest: "~{{workstation_user}}/.gitconfig"

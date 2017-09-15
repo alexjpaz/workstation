@@ -1,0 +1,36 @@
+[user]
+	name = Alexander Paz
+	email = alexjpaz@gmail.com
+	signingkey = 0793FE7D
+[alias]
+	add-non-white-space = !sh -c 'git diff -U0 -w --no-color -- \"$@\" | git apply --cached --ignore-whitespace --unidiff-zero "#"'
+	co = checkout
+	st = status
+	f = !git forest
+	t = !git tree
+	fall = fetch --all
+	d = diff HEAD
+	ds = diff --name-status
+	dc = diff --cached
+	sts = status -s .
+	stu = status -unos
+	dd = diff --cached HEAD
+	tree = log --decorate --graph --abbrev-commit --oneline
+	forest = log --decorate --graph --abbrev-commit --oneline --all
+	aa = add -u
+	p = pull --rebase
+	pp = !git p && git push
+	vimp = !vim -p $(git diff --name-only)
+	merge-squash = "!f() { git merge --squash $@ && git commit -m \"Merge-squashed $@\"; }; f"
+	replace = '!git-replace'
+    fixup = !git commit --fixup HEAD
+    af = "!f() { git aa && git commit --fixup HEAD; }; f"
+
+[core]
+	excludesfile = /Users/apaz/.gitignore_global
+[push]
+	default = current
+[commit]
+	#gpgsign = true
+[branch]
+	;autoSetupMerge = always

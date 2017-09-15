@@ -1,0 +1,9 @@
+#!/bin/bash
+
+git-replace() {
+	local findString=$1
+	local replaceString=$2
+	local delimiter=${3:-@}
+
+	git grep -l "${findString}" | xargs sed -i "s${delimiter}${findString}${delimiter}${replaceString}${delimiter}g"
+}

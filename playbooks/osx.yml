@@ -4,7 +4,10 @@
     workstation_user: apaz
     isOSX: true
   tasks:
-    - include: vim/tasks.yml
-    - include: bashrc/tasks.yml
-    - include: editorconfig/tasks.yml
-    - include: osx/tasks.yml
+    - include: "{{ item }}/tasks.yml"
+      with_items:
+        - bashrc
+        - editorconfig
+        - git
+        - osx
+        - vim
