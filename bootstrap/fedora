@@ -1,0 +1,3 @@
+#!/bin/bash
+dnf install -y ansible
+ansible-playbook -i "localhost," -c local playbooks/fedora.yml

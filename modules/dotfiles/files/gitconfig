@@ -27,7 +27,7 @@
     af = "!f() { git aa && git commit --fixup HEAD; }; f"
 
 [core]
-	excludesfile = /home/apaz/.gitignore_global
+	excludesfile = /Users/apaz/.gitignore_global
 [push]
 	default = current
 [commit]

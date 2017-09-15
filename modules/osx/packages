@@ -1,0 +1,4 @@
+#!/bin/bash
+brew cask install amethyst
+brew install git
+brew install bash-completion

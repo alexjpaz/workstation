@@ -11,6 +11,6 @@ RUN useradd -m -u 1000 datboi
 
 ADD . /build
 
-RUN /build/setup
+RUN /build/bootstrap/fedora
 
 ENTRYPOINT ["/build/test.sh"]

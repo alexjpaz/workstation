@@ -1,0 +1,13 @@
+---
+- hosts: all
+  vars:
+    workstation_user: apaz
+    isOSX: true
+  tasks:
+    - include: "{{ item }}/tasks.yml"
+      with_items:
+        - bashrc
+        - editorconfig
+        - git
+        - osx
+        - vim
