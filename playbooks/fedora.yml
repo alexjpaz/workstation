@@ -12,4 +12,4 @@
         - editorconfig
         - git
         - osx
-        - vim
+        #- vim
