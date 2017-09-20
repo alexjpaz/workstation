@@ -1,0 +1,9 @@
+tell application "Safari"
+    set theWindows to windows
+    set win2 to item 1 of theWindows
+    tell win2
+        set index to 1
+        set visible to false
+        set visible to true
+    end tell
+end tell
