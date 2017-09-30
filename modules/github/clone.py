@@ -12,10 +12,12 @@ repos = {
         "docker-toolbox",
         "liftit",
         "prathu",
-
+        "alexjpaz.com"
     ],
     "alexjpaz-playground": [
-        "ci-cd-examples"
+        "ci-cd-examples",
+        "blessedjs",
+        "firebase"
     ]
 }
 
