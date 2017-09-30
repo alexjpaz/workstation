@@ -3,4 +3,8 @@
     name: bash-completion
 - package:
     name: coreutils
+- package:
+    name: pip
+- package:
+    name: pip3
 
