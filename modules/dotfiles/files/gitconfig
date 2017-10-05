@@ -34,3 +34,5 @@
 	#gpgsign = true
 [branch]
 	;autoSetupMerge = always
+[commit]
+  template = ~/.gitmessage

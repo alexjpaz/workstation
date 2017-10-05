@@ -8,6 +8,11 @@
     src: ./git-replace
     dest: "~{{workstation_user}}/.bash.d/git-replace"
 
+- name: Create .gitmessage
+  template:
+    src: ./gitmessage
+    dest: "~{{workstation_user}}/.gitmessage"
+
 - name: Create .gitconfig
   template:
     src: ./gitconfig

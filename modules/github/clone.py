@@ -12,7 +12,8 @@ repos = {
         "docker-toolbox",
         "liftit",
         "prathu",
-        "alexjpaz.com"
+        "alexjpaz.com",
+        "workstation-code.d"
     ],
     "alexjpaz-playground": [
         "ci-cd-examples",

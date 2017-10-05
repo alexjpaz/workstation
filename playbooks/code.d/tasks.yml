@@ -1,0 +1,12 @@
+---
+- name: Create code files
+  file:
+    path: "~{{workstation_user}}/.code.d"
+    state: directory
+    mode: 0755
+
+- name: Copy code fragments
+  copy:
+    src: ./code/
+    mode: u+rx
+    dest: "~{{workstation_user}}/.code.d/"

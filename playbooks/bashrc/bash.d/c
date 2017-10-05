@@ -6,7 +6,7 @@ function c() {
     if [[ ${#results[@]} == 0 ]]; then
         echo "No matching projects for $1"
     elif [[ ${#results[@]} == 1 ]]; then
-        pushd $CODE_DIR/$results
+        cd $CODE_DIR/$results
     else
         len=${#results[@]}
 
@@ -17,7 +17,7 @@ function c() {
         echo -n "Choose a project (1-5): "
         read -n 1 PICK
         echo
-        pushd $CODE_DIR/${results[$((PICK - 1))]}
+        cd $CODE_DIR/${results[$((PICK - 1))]}
     fi
 }
 
