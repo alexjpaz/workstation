@@ -1,2 +1,2 @@
 #!/bin/bash
-ansible-playbook -i "localhost," -c local playbooks/osx.yml
+ansible-playbook -i "localhost," -c local playbooks/osx.yml $@

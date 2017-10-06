@@ -1,0 +1,10 @@
+---
+- name: install tmux.conf
+  tags: ['tmux']
+  copy:
+    src: ./tmux.conf
+    dest: "~{{workstation_user}}/.tmux.conf"
+    owner: "{{workstation_user}}"
+    mode: 0700
+
+
