@@ -2,7 +2,7 @@
 set -e
 set -x
 
-sudo -c 'which docker' $WORKSTATION_USER
+#sudo -c 'which docker' $WORKSTATION_USER
 
 vim --version | grep '+visualextra'
 
