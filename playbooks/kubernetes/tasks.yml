@@ -1,0 +1,8 @@
+---
+- name: Install kubectl
+  package:
+    name: kubectl
+
+- name: Install kops
+  package:
+    name: kops
