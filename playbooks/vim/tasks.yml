@@ -18,3 +18,14 @@
 - name: Install Vim Plugins
   command: vim +PlugInstall +qa
 
+- name: Ensure Vim plugin directory exists
+  tags: ['vim']
+  file: 
+    path: "~{{workstation_user}}/.vim/plugin/apaz"
+    state: directory
+
+- name: Configure Vim just for me :)
+  tags: ['vim']
+  copy:
+    src: "./plugin"
+    dest: "~{{workstation_user}}/.vim/plugin/apaz"
