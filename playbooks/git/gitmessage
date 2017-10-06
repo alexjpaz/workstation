@@ -6,6 +6,12 @@ This change addresses the need by:
 
 *
 
+# ** Guidelines **
+#
 # 50-character subject line
 #
 # 72-character wrapped longer description
+#
+# 
+# https://github.com/erlang/otp/wiki/Writing-good-commit-messages
+# https://chris.beams.io/posts/git-commit/
