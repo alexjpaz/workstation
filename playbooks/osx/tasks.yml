@@ -3,6 +3,11 @@
     name: bash-completion
 - package:
     name: coreutils
+- copy:
+    src: ./bash-completion
+    dest: "~{{workstation_user}}/.bash.d/osx_bash_completion"
+    mode: u+rx
+
 #- package:
     #name: pip
 #- package:
