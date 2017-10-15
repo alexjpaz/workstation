@@ -6,7 +6,8 @@
     mode: 0755
 
 - name: Copy code fragments
-  copy:
-    src: ./code/
-    mode: u+rx
-    dest: "~{{workstation_user}}/.code.d/"
+  tags: ['code.d']
+  file:
+    dest: "~{{workstation_user}}/.code.d/github.code"
+    src: "{{ playbook_dir }}/code.d/code/github.code"
+    state: link
