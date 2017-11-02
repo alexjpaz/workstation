@@ -1,14 +1,16 @@
 ---
+- set_fact:
+    task_dir: "{{ playbook_dir }}/{{ item }}"
+
 - name: Install Vim 
   package:
     name: vim
 
 - name: Configure Vim
-  copy:
-    src: ./.vimrc
+  file:
+    src: "{{ task_dir }}/.vimrc"
     dest: "~{{workstation_user}}/.vimrc"
-    owner: "{{workstation_user}}"
-    mode: 0700
+    state: link
 
 - name: Install Plug.vim
   get_url:
@@ -21,11 +23,6 @@
 - name: Ensure Vim plugin directory exists
   tags: ['vim']
   file: 
-    path: "~{{workstation_user}}/.vim/plugin/apaz"
-    state: directory
-
-- name: Configure Vim just for me :)
-  tags: ['vim']
-  copy:
-    src: "./plugin"
+    src: "{{ task_dir }}/plugin/apaz"
     dest: "~{{workstation_user}}/.vim/plugin/apaz"
+    state: link

@@ -3,14 +3,15 @@
   vars:
     workstation_user: apaz
     isOSX: true
+    task_dirs: 
+      - bashrc
+      - editorconfig
+      - git
+      - osx
+      - vim
+      - code.d
+      - tmux
+      - kubernetes
   tasks:
     - include: "{{ item }}/tasks.yml"
-      with_items:
-        - bashrc
-        - editorconfig
-        - git
-        - osx
-        - vim
-        - code.d
-        - tmux
-        - kubernetes
+      with_items: "{{ task_dirs }}"

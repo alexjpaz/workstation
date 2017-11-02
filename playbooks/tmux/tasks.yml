@@ -1,10 +1,12 @@
 ---
-- name: install tmux.conf
+- set_fact:
+    task_dir: "{{ playbook_dir }}/{{ item }}"
+
+- name: configure tmux.conf
   tags: ['tmux']
-  copy:
-    src: ./tmux.conf
+  file:
+    src: "{{ task_dir }}/tmux.conf"
     dest: "~{{workstation_user}}/.tmux.conf"
-    owner: "{{workstation_user}}"
-    mode: 0700
+    state: link
 
 
