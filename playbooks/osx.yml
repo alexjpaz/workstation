@@ -12,6 +12,7 @@
       - code.d
       - tmux
       - kubernetes
+      - node
   tasks:
     - include: "{{ item }}/tasks.yml"
       with_items: "{{ task_dirs }}"
