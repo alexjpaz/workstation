@@ -21,7 +21,7 @@
 	p = pull --rebase
 	pp = !git p && git push
 	vimp = !vim -p $(git diff --name-only)
-	merge-squash = "!f() { git merge --squash $@ && git commit -m \"Merge-squashed $@\"; }; f"
+	merge-squash = "!f() { git merge --squash $@ && git commit -c $@ ; }; f"
 	replace = '!git-replace'
     fixup = !git commit --fixup HEAD
     af = "!f() { git aa && git commit --fixup HEAD; }; f"
