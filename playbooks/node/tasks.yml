@@ -1,0 +1,23 @@
+---
+
+- name: Install node
+  tags: ['node']
+  package:
+    name: node
+
+- name: Install npm
+  tags: ['node']
+  package:
+    name: npm
+
+- name: Install nvm
+  tags: ['node']
+  package:
+    name: npm
+
+- name: Add nvm to path
+  tags: ['node']
+  copy:
+    src: ./nvm
+    dest: ~/.bash.d/nvm
+    mode: 0755
