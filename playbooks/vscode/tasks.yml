@@ -1,0 +1,6 @@
+---
+- name: "Install visual-studio-code (OSX)" 
+  when: isOSX == true
+  homebrew_cask:
+    name: visual-studio-code
+    state: present
