@@ -48,10 +48,11 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'juvenn/mustache.vim'
 Plug 'jimmyhchan/dustjs.vim'
 
-"SnipMate
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-Plug 'garbas/vim-snipmate'
+" Completion
+"Plug 'Valloric/YouCompleteMe'
+
+" SnipMate
+Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 " Go

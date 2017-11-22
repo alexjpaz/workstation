@@ -1,4 +1,8 @@
 ---
+- name: Install CMake for YouCompleteMe.vim
+  package:
+    name: cmake
+
 - set_fact:
     task_dir: "{{ playbook_dir }}/{{ item }}"
 
