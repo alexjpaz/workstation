@@ -1,0 +1,8 @@
+---
+
+- name: Install sshfs
+  tags: ['sshfs']
+  package:
+    name: sshfs
+
+
