@@ -15,6 +15,7 @@
       - node
       - vscode
       - sshfs
+      - firefox
   tasks:
     - include: "{{ item }}/tasks.yml"
       with_items: "{{ task_dirs }}"

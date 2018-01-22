@@ -1,0 +1,13 @@
+---
+- name: Install Firefox
+  tags: ['firefox']
+  when: isOSX != true
+  package:
+    name: firefox
+
+- name: "Install Firefox (OSX)"
+  tags: ['firefox']
+  when: isOSX == true
+  homebrew_cask:
+    name: firefox
+    state: present
