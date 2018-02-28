@@ -18,9 +18,15 @@
 
 - name: Ensure .vim/autoload directories exist
   file: 
-    path: ".vim/autoload" 
+    path: "~{{workstation_user}}/.vim/autoload" 
     state: directory
-    recursive: true
+    recurse: true
+
+- name: Ensure .vim/plugin directories exist
+  file: 
+    path: "~{{workstation_user}}/.vim/plugin" 
+    state: directory
+    recurse: true
 
 - name: Install Plug.vim
   get_url:
