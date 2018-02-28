@@ -13,9 +13,10 @@
       - tmux
       - kubernetes
       - node
-      - vscode
-      - sshfs
       - firefox
+      - terminal
+      - intellij
+      - vscode
   tasks:
     - include: "{{ item }}/tasks.yml"
       with_items: "{{ task_dirs }}"

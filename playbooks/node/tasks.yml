@@ -5,6 +5,11 @@
   package:
     name: node
 
+- name: Install yarn
+  tags: ['node']
+  package:
+    name: yarn
+
 - name: Install npm
   tags: ['node']
   package:

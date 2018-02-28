@@ -1,6 +1,7 @@
 ---
 - name: Install intellij (OSX)
-  tags: ['itellij']
-  when: isOSX == true
+  tags: ['intellij']
+  when: "isOSX == true"
+  ignore_errors: true
   homebrew_cask:
     name: caskroom/cask/intellij-idea-ce
