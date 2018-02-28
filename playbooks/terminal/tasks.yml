@@ -1,0 +1,23 @@
+---
+- name: "install iterm2" 
+  when: isOSX == true
+  tags: ['terminal']
+  homebrew_cask:
+    name: iterm2
+    state: present
+
+- name: "tap fonts"
+  when: isOSX == true
+  tags: ['terminal','fonts']
+  homebrew_tap:
+    name: caskroom/fonts 
+    state: present
+
+- name: "install Hack font"
+  when: isOSX == true
+  tags: ['terminal','font']
+  ignore_errors: yes
+  package:
+    name: font-hack
+    state: present
+

@@ -2,6 +2,13 @@
 - set_fact:
     task_dir: "{{ playbook_dir }}/{{ item }}"
 
+- name: "install tmux"
+  tags: ['terminal']
+  package:
+    name: tmux
+    state: present
+ 
+
 - name: configure tmux.conf
   tags: ['tmux']
   file:
