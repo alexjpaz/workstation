@@ -3,6 +3,10 @@
     name: bash-completion
 - package:
     name: coreutils
+- package:
+    name: findutils
+- package:
+    name: gnu-tar
 - copy:
     src: ./bash-completion
     dest: "~{{workstation_user}}/.bash.d/osx_bash_completion"
