@@ -12,8 +12,10 @@
     dest: "~{{workstation_user}}/.bash.d/osx_bash_completion"
     mode: u+rx
 
-#- package:
-    #name: pip
-#- package:
-    #name: pip3
-
+- name: "Defaults - dock autohide"
+  tags: ["test"]
+  osx_defaults:
+    domain: com.apple.Dock
+    key: autohide
+    type: int
+    value: 1
