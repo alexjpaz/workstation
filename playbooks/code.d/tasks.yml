@@ -1,4 +1,25 @@
 ---
+- name: Prepare cody
+  tags: ['cody']
+  file:
+    path: "~{{workstation_user}}/.opt/cody"
+    state: directory
+    recurse: yes
+
+- name: Download cody
+  #tags: ['cody']
+  unarchive:
+    src: https://registry.yarnpkg.com/@alexjpaz/cody/-/cody-1.0.0-beta.ee3f348c9f4220a86c926b63a5a1ed0287d7ede4.tgz
+    dest: "~{{workstation_user}}/.opt/cody/"
+    remote_src: yes
+
+- name: Add cody to path (OSX)
+  tags: ['cody']
+  file:
+    src: "~{{workstation_user}}/.opt/cody/package/dist/cody-macos"
+    dest: "/usr/local/bin/cody"
+    state: link
+
 - name: Create code files
   file:
     path: "~{{workstation_user}}/.code.d"
