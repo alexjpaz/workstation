@@ -1,35 +1,9 @@
 # .bashrc
 
-PS1="\$ "
-
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
-
-# Custom bash prompt via kirsle.net/wizards/ps1.html
-if [[ -z $PS1 ]]; then
-	INTERACTIVE=nope
-else
-	PS1="\[$(tput setaf 5)\]\\$ \[$(tput sgr0)\]"
-	export PS1
-fi
-
-
-go_controllo() {
-	cd ~/code/controllo/controllo
-}
-
-
-
-dkr-fedora() {
-	docker run -it fedora:25 /bin/bash
-}
-
-#export DOCKER_HOST=tcp://localhost:2376
-
-# Uncomment the following line if you don't like systemctl's auto-paging feature:
-# export SYSTEMD_PAGER=
 
 # User specific aliases and functions
 alias vi='vim'

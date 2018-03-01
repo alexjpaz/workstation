@@ -4,10 +4,10 @@
     workstation_user: apaz
     isOSX: true
     task_dirs: 
+      - osx
       - bashrc
       - editorconfig
       - git
-      - osx
       - vim
       - code.d
       - tmux

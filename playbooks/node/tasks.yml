@@ -21,6 +21,7 @@
     name: npm
 
 - name: Add nvm to path
+  when: false
   tags: ['node']
   copy:
     src: ./nvm

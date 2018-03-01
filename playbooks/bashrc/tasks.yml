@@ -1,10 +1,12 @@
 ---
 - name: Copy .bashrc 
+  tags: ['bashrc']
   copy:
     src: ./bashrc
     dest: "~{{workstation_user}}/.bashrc"
 
 - name: Copy bashrc fragments
+  tags: ['bashrc']
   copy:
     src: ./bash.d/
     mode: u+rx

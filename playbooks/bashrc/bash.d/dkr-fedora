@@ -1,0 +1,3 @@
+dkr-fedora() {
+	docker run -it fedora:25 /bin/bash
+}
