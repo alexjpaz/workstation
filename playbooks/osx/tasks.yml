@@ -19,3 +19,10 @@
     key: autohide
     type: int
     value: 1
+
+- name: "Defaults - hide desktop icons"
+  osx_defaults:
+    domain: com.apple.finder
+    key: CreateDesktop
+    type: boolean
+    value: false
