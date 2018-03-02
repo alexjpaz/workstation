@@ -1,0 +1,11 @@
+---
+- name: "install utility packages"
+  tags: ['utils']
+  with_items:
+    - entr
+    - ag
+    - ack
+  loop_control:
+    loop_var: "utils_item"
+  package:
+    name: "{{ utils_item }}"

@@ -17,6 +17,7 @@
       - terminal
       - intellij
       - vscode
+      - utils
   tasks:
     - include: "{{ item }}/tasks.yml"
       with_items: "{{ task_dirs }}"
