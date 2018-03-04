@@ -1,0 +1,12 @@
+---
+- name: "users - create group"
+  group:
+    name: "{{ workstation_user }}"
+    state: present
+
+- name: "users - create user"
+  user:
+    name: "{{ workstation_user }}"
+    group: "{{ workstation_user }}"
+    state: present
+
