@@ -1,8 +1,8 @@
 ---
 - hosts: all
-  import_playbook: 'vars/root.yml'
   tasks:
-    - include: "{{ item }}/tasks.yml"
+    - include_vars: 'vars/root.yml'
+    - include_tasks: "{{ item }}/tasks.yml"
       with_items:
         - users
         #- gnutools

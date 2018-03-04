@@ -7,6 +7,6 @@
 - name: "users - create user"
   user:
     name: "{{ workstation_user }}"
-    group: "{{ workstation_user }}"
+    #group: "{{ workstation_user }}"
     state: present
 

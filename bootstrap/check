@@ -1,0 +1,2 @@
+#!/bin/bash 
+ansible-playbook --check -i "localhost," -c local playbooks/fedora.yml $@
