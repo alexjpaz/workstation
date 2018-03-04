@@ -8,9 +8,9 @@
       action: user name={{ workstation_user }} group=1000 state=present
     - include: "{{ item }}/tasks.yml"
       with_items:
+        - gnutools
         - bashrc
         - editorconfig
         - git
         - osx
-        - gnutools
         #- vim
