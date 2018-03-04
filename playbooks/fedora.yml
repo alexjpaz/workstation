@@ -1,14 +1,12 @@
 ---
 - hosts: all
-  vars:
-    workstation_user: apaz
-    isOSX: true
+  import_playbook: 'vars/root.yml'
   tasks:
     - include: "{{ item }}/tasks.yml"
       with_items:
         - users
         #- gnutools
-        #- bashrc
+        - bashrc
         #- editorconfig
         #- git
         #- osx
