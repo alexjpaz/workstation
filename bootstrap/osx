@@ -1,3 +1,9 @@
 #!/bin/bash
-brew install ansible
+
+if [[ $(command -v ansible) ]]; then
+    echo "ansible already installed. Skipping"
+else
+    brew install ansible
+fi
+
 ansible-playbook -i "localhost," -c local playbooks/osx.yml

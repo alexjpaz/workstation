@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [[ $(command -v ansible) ]]; then
+    echo "ansible already installed. Skipping"
+else
+    apt-get update
+    apt-get install -y ansible
+fi
+
+ansible-playbook -i "localhost," -c local playbooks/fedora.yml
