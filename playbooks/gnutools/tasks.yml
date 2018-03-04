@@ -1,0 +1,5 @@
+---
+- name: "gnu tools"
+  package:
+    name:
+      - findutils

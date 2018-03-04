@@ -12,4 +12,5 @@
         - editorconfig
         - git
         - osx
+        - gnutools
         #- vim
