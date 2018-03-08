@@ -1,4 +1,7 @@
 ---
+- set_fact:
+    task_dir: "{{ playbook_dir }}/{{ item }}"
+
 - name: "Install visual-studio-code (OSX)" 
   when: isOSX == true
   tags: ['vscode']
@@ -6,3 +9,10 @@
   homebrew_cask:
     name: visual-studio-code
     state: present
+
+- name: "visual-studio-code - settings"
+  tags: ['vscode']
+  file: 
+    src: "{{ playbook_dir }}/{{ item }}/settings.json"
+    dest: "~{{workstation_user}}/Library/Application\ Support/Code/User/settings.json"
+    state: link
