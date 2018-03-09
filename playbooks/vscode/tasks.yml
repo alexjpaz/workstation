@@ -16,3 +16,10 @@
     src: "{{ playbook_dir }}/{{ item }}/settings.json"
     dest: "~{{workstation_user}}/Library/Application\ Support/Code/User/settings.json"
     state: link
+
+- name: "visual-studio-code - keybindings"
+  tags: ['vscode']
+  file: 
+    src: "{{ playbook_dir }}/{{ item }}/keybindings.json"
+    dest: "~{{workstation_user}}/Library/Application\ Support/Code/User/keybindings.json"
+    state: link
