@@ -1,4 +1,8 @@
 ---
+- tags: ['test111']
+  set_fact:
+    task_dir: "{{ playbook_dir }}/{{ item }}"
+
 - name: Copy .bashrc 
   tags: ['bashrc']
   copy:
@@ -11,3 +15,14 @@
     src: ./bash.d/
     mode: u+rx
     dest: "~{{workstation_user}}/.bash.d/"
+
+- name: Link bash.d files
+  tags: ['bashrc', 'test111']
+  with_items:
+    - vm
+  loop_control:
+    loop_var: "bash_file"
+  file: 
+    src: "{{ task_dir }}/bash.d/{{ bash_file }}"
+    dest: "~{{workstation_user}}/.bash.d/{{ bash_file }}"
+    state: link
