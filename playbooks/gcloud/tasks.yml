@@ -1,0 +1,7 @@
+---
+- name: Install gcloud
+  tags: ['osx']
+  when: "isOSX == true"
+  ignore_errors: true
+  homebrew_cask:
+    name: caskroom/cask/google-cloud-sdk
