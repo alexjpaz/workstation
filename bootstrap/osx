@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [[ $(command -v brew) ]]; then
+    echo "brew already installed. Skipping"
+else
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
 if [[ $(command -v ansible) ]]; then
     echo "ansible already installed. Skipping"
 else
