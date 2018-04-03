@@ -9,11 +9,11 @@ fi
 alias vi='vim'
 alias docker-ps-ids="docker ps --format 'table {{.ID}}\t{{.Names}}'"
 
-for script in $(find $HOME/.bash.d -executable)
+for script in $(ls $HOME/.bash.d)
 do
-	if [[ ! -d ${script} ]]; then
-		source ${script}
-	fi
+    if [[ ! -d ${HOME}/.bash.d/${script} && -x ${HOME}/.bash.d/${script} ]]; then
+        source ${HOME}/.bash.d/${script}
+    fi
 done
 
 export EDITOR=vim
