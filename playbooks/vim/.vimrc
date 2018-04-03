@@ -52,7 +52,7 @@ Plug 'jimmyhchan/dustjs.vim'
 "Plug 'Valloric/YouCompleteMe'
 
 " SnipMate
-Plug 'SirVer/ultisnips'
+" Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 " Go
