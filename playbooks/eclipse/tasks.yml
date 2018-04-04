@@ -1,1 +1,6 @@
-# brew cask install eclipse-java
+- name: "install eclipse on osx"
+  tags: ['eclipse']
+  when: isOSX == true
+  homebrew_cask:
+    name: eclipse-java
+    state: present

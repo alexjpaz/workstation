@@ -6,6 +6,7 @@
     task_dirs: 
       - osx
       - bashrc
+      - eclipse
       - editorconfig
       - git
       - vim
