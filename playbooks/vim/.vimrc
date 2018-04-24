@@ -32,7 +32,10 @@ Plug 'avakhov/vim-yaml'
 
 " Syntastic
 " Plug 'scrooloose/syntastic'
-Plug 'vim-syntastic/syntastic'
+" Plug 'vim-syntastic/syntastic'
+
+" Lint
+Plug 'w0rp/ale'
 
 " Javascript
 Plug 'leafgarland/typescript-vim'
