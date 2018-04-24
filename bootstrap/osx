@@ -12,4 +12,4 @@ else
     brew install ansible
 fi
 
-ansible-playbook -i "localhost," -c local playbooks/osx.yml
+ansible-playbook -i "localhost," -c local playbooks/osx.yml $@
