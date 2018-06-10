@@ -71,6 +71,10 @@ Plug 'Valloric/ListToggle'
 " Dracula
 Plug 'dracula/vim'
 
+" Test
+Plug 'janko-m/vim-test'
+Plug 'tpope/vim-dispatch'
+
 call plug#end()
 
 runtime macros/matchit.vim
