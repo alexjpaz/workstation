@@ -9,12 +9,19 @@ fi
 alias vi='vim'
 alias docker-ps-ids="docker ps --format 'table {{.ID}}\t{{.Names}}'"
 
-for script in $(ls $HOME/.bash.d)
-do
-    if [[ ! -d ${HOME}/.bash.d/${script} && -x ${HOME}/.bash.d/${script} ]]; then
-        source ${HOME}/.bash.d/${script}
-    fi
-done
+__source_bash_d() {
+    local dir=${1}
+    for script in $(ls ${dir})
+    do
+        if [[ -d ${dir}/${script} ]]; then
+            __source_bash_d ${dir}/${script}
+        elif [[ ! -d ${dir}/${script} && -x ${dir}/${script} ]]; then
+            source ${dir}/${script}
+        fi
+    done
+}
+
+__source_bash_d "$HOME/.bash.d"
 
 export EDITOR=vim
 export GOPATH=$HOME/go

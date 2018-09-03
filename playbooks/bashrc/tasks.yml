@@ -1,5 +1,5 @@
 ---
-- tags: ['test111']
+- tags: ['bashrc']
   set_fact:
     task_dir: "{{ playbook_dir }}/{{ item }}"
 
@@ -9,20 +9,23 @@
     src: ./bashrc
     dest: "~{{workstation_user}}/.bashrc"
 
-- name: Copy bashrc fragments
+- name: Ensure .vim/plugin directories exist
   tags: ['bashrc']
-  copy:
-    src: ./bash.d/
-    mode: u+rx
-    dest: "~{{workstation_user}}/.bash.d/"
+  file: 
+    path: "~{{workstation_user}}/.bash.d/managed" 
+    state: directory
+    recurse: true
 
 - name: Link bash.d files
-  tags: ['bashrc', 'test111']
+  tags: ['bashrc']
   with_items:
-    - vm
+    - prompt
+    - c
+    - http
+    - dkr-fedora
   loop_control:
     loop_var: "bash_file"
   file: 
     src: "{{ task_dir }}/bash.d/{{ bash_file }}"
-    dest: "~{{workstation_user}}/.bash.d/{{ bash_file }}"
+    dest: "~{{workstation_user}}/.bash.d/managed/{{ bash_file }}"
     state: link
