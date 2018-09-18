@@ -19,6 +19,10 @@ function __prompt_get_random_prompt() {
     echo "$p"
 }
 
+function __prompt_set_random_prompt() {
+    PS1="$(__prompt_get_random_prompt)"
+}
+
 if [[ -z $PS1 ]]; then
 	INTERACTIVE=nope
 else

@@ -9,3 +9,13 @@
     loop_var: "utils_item"
   package:
     name: "{{ utils_item }}"
+
+- name: "install utility packages (via cask)"
+  tags: ['utils']
+  with_items:
+    - licecap
+  loop_control:
+    loop_var: "utils_item"
+  homebrew_cask:
+    name: "{{ utils_item }}"
+    state: present
