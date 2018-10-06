@@ -1,24 +1,47 @@
 ---
+- name: set facts (git)
+  tags: ['git']
+  set_fact:
+    task_dir: "{{ playbook_dir }}/{{ item }}"
+
+
 - name: Install git
+  tags: ['git']
   package:
     name: git
 
-- name: Add git-replace script
-  copy:
-    src: ./git-replace
-    dest: "~{{workstation_user}}/.bash.d/git-replace"
+- name: Ensure git bash directories exist
+  tags: ['git']
+  file: 
+    path: "~{{workstation_user}}/.bash.d/managed/git" 
+    state: directory
+    recurse: true
+
+- name: Link git bash.d files
+  tags: ['git']
+  with_items:
+    - git-replace
+  loop_control:
+    loop_var: "bash_file"
+  file: 
+    src: "{{ task_dir }}/bash.d/{{ bash_file }}"
+    dest: "~{{workstation_user}}/.bash.d/managed/git/{{ bash_file }}"
+    state: link
 
 - name: Create .gitmessage
+  tags: ['git']
   template:
     src: ./gitmessage
     dest: "~{{workstation_user}}/.gitmessage"
 
 - name: Create .gitconfig
+  tags: ['git']
   template:
     src: ./gitconfig
     dest: "~{{workstation_user}}/.gitconfig"
 
 - name: Create .gitignore_global
+  tags: ['git']
   copy:
     content: |
       *.secret

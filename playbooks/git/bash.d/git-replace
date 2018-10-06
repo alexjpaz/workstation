@@ -1,0 +1,25 @@
+#!/bin/bash
+
+git-replace() {
+    (
+        set -e
+        SEARCH=$1
+        REPLACE=$2
+        SEPARATOR=${3-"~"}
+
+        if [[ "$SEARCH" = *${SEPARATOR}* ]]; then
+            echo "Error: your search parameter ${SEARCH}contains the separator character ${SEPARATOR}"
+            exit 1
+        fi
+
+        if [[ "$REPLACE" = *${SEPARATOR}* ]]; then
+            echo "Error: your replace parameter ${REPLACE}  contains the separator character ${SEPARATOR}"
+            exit 1
+        fi
+
+        set -x
+        git grep -l "$SEARCH" | xargs sed -i "s${SEPARATOR}${SEARCH}${SEPARATOR}${REPLACE}${SEPARATOR}"
+        set +x
+        git status
+    )
+}
