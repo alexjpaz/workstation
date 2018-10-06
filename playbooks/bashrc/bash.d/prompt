@@ -17,6 +17,7 @@ function __prompt_get_random_prompt() {
     arr[7]=$(__prompt_wrap 27 ❯ )
     arr[8]=$(__prompt_wrap 5 'ʕっ•ᴥ•ʔっ' )
     arr[9]=$(__prompt_wrap 8 '(ಠ_ಠ)' )
+    arr[10]=$(__prompt_wrap 160 ϟ)
     local p=${arr[$[$RANDOM % ${#arr[@]}]]}
     echo "$p"
 }
