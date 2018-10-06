@@ -10,7 +10,14 @@
   when: isOSX == true
   tags: ['terminal','fonts']
   homebrew_tap:
-    name: caskroom/fonts 
+    name: caskroom/fonts
+    state: present
+
+- name: "tap fonts (hack)"
+  when: isOSX == true
+  tags: ['terminal','fonts']
+  homebrew_tap:
+    name: caskroom/fonts/font-hack
     state: present
 
 - name: "install Hack font"
