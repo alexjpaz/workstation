@@ -1,4 +1,5 @@
 ---
+
 - name: Install pass
   tags: ['pass']
   package:
