@@ -19,6 +19,7 @@
       - intellij
       - vscode
       - utils
+      - pass
   tasks:
     - include: "{{ item }}/tasks.yml"
       with_items: "{{ task_dirs }}"
