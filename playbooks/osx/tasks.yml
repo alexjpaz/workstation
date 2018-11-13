@@ -7,10 +7,6 @@
     name: findutils
 - package:
     name: gnu-tar
-- copy:
-    src: ./bash-completion
-    dest: "~{{workstation_user}}/.bash.d/osx_bash_completion"
-    mode: u+rx
 
 - name: "Defaults - dock autohide"
   tags: ["test"]

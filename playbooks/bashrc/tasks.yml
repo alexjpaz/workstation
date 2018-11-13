@@ -3,6 +3,22 @@
   set_fact:
     task_dir: "{{ playbook_dir }}/{{ item }}"
 
+- name: "bash: ensure .bash.d exists"
+  tags: ['bashrc']
+  file: 
+    path: "~{{workstation_user}}/.bash.d" 
+    state: directory
+    recurse: true
+
+- name: "bashrc: osx completion"
+  tags: ['bashrc']
+  copy:
+    src: ./bash-completion
+    dest: "~{{workstation_user}}/.bash.d/osx_bash_completion"
+    mode: u+rx
+
+
+
 - name: Copy .bashrc 
   tags: ['bashrc']
   copy:
