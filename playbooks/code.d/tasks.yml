@@ -1,16 +1,16 @@
 ---
+- name: Clean cody destination
+  tags: ['cody']
+  file:
+    state: absent
+    dest: "~{{workstation_user}}/.opt/cody/"
+
 - name: Prepare cody
   tags: ['cody']
   file:
     path: "~{{workstation_user}}/.opt/cody"
     state: directory
     recurse: yes
-
-- name: Clean cody destination
-  tags: ['cody']
-  file:
-    state: absent
-    dest: "~{{workstation_user}}/.opt/cody/"
 
 - name: Download cody
   tags: ['cody']

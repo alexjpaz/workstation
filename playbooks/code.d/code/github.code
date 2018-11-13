@@ -2,7 +2,6 @@ git@github.com:alexjpaz-playground/blessedjs.git
 git@github.com:alexjpaz-playground/ci-cd-examples.git
 git@github.com:alexjpaz-playground/firebase.git
 git@github.com:alexjpaz-playground/pets.git
-git@github.com:alexjpaz/alexjaz.com.git
 git@github.com:alexjpaz/alexjpaz.com.git
 git@github.com:alexjpaz/cody.git
 git@github.com:alexjpaz/docker-toolbox.git
@@ -16,3 +15,6 @@ git@github.com:alexjpaz/soundboard.git
 git@gitlab.com:nyxcharon/PassVault.git
 git@github.com:alexjpaz-playground/redux.git
 git@github.com:alexjpaz/lambda-slackbot.git
+git@github.com:alexjpaz-playground/rust-cli.git
+git@github.com:alexjpaz-playground/python-cli.git
+git@github.com:alexjpaz-playground/postgresql-jsonb.git
