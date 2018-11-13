@@ -16,6 +16,7 @@
 - name: "tap fonts (hack)"
   when: isOSX == true
   tags: ['terminal','fonts']
+  ignore_errors: yes
   homebrew_tap:
     name: caskroom/fonts/font-hack
     state: present
