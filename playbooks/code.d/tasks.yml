@@ -6,8 +6,14 @@
     state: directory
     recurse: yes
 
+- name: Clean cody destination
+  tags: ['cody']
+  file:
+    state: absent
+    dest: "~{{workstation_user}}/.opt/cody/"
+
 - name: Download cody
-  #tags: ['cody']
+  tags: ['cody']
   unarchive:
     src: https://registry.yarnpkg.com/@alexjpaz/cody/-/cody-1.1.1-beta.5bef69c80b059ba142c43bcaf0e7bd80c2d51211.tgz
     dest: "~{{workstation_user}}/.opt/cody/"
@@ -21,6 +27,7 @@
     state: link
 
 - name: Create code files
+  tags: ['cody']
   file:
     path: "~{{workstation_user}}/.code.d"
     state: directory
