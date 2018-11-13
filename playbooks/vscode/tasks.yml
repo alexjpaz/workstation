@@ -10,6 +10,13 @@
     name: visual-studio-code
     state: present
 
+- name: "visual-studio-code: directories exist"
+  tags: ['bashrc']
+  file: 
+    path: "~{{workstation_user}}/Library/Application\ Support/Code/User/" 
+    state: directory
+    recurse: true
+
 - name: "visual-studio-code - settings"
   tags: ['vscode']
   file: 
