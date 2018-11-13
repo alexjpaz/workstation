@@ -9,7 +9,7 @@
 - name: Download cody
   #tags: ['cody']
   unarchive:
-    src: https://registry.yarnpkg.com/@alexjpaz/cody/-/cody-1.1.1-beta.7f1fdd6c092a9f2a444161c2bbd50638ca6897d6.tgz
+    src: https://registry.yarnpkg.com/@alexjpaz/cody/-/cody-1.1.1-beta.5bef69c80b059ba142c43bcaf0e7bd80c2d51211.tgz
     dest: "~{{workstation_user}}/.opt/cody/"
     remote_src: yes
 
