@@ -22,3 +22,11 @@
     key: CreateDesktop
     type: boolean
     value: false
+
+- name: "install amethyst"
+  tags: ['amethyst']
+  when: isOSX == true
+  homebrew_cask:
+    name: amethyst
+    state: present
+
