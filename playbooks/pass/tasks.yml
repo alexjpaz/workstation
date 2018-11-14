@@ -3,12 +3,14 @@
 - name: Install pass
   tags: ['pass']
   package:
-    - name: pass
+    name: pass
+    state: present
 
 - name: Install pass-otp (1)
   tags: ['pass']
   package:
-    - name: oath-toolkit
+    name: oath-toolkit
+    state: present
 
 - name: Install pass-otp (2)
   tags: ['pass']
