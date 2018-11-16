@@ -23,6 +23,8 @@ Plug 'groenewege/vim-less'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'kien/ctrlp.vim'
 
+Plug 'gorodinskiy/vim-coloresque'
+
 " Markdown
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
