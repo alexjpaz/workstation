@@ -1,0 +1,6 @@
+---
+
+- name: python - Install pipenv
+  tags: ['python']
+  package:
+    name: pipenv

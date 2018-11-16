@@ -13,6 +13,7 @@
       - code.d
       - tmux
       - kubernetes
+      - python
       - node
       - firefox
       - terminal
