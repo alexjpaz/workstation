@@ -1,12 +1,20 @@
 ---
-- package:
-    name: bash-completion
-- package:
-    name: coreutils
-- package:
-    name: findutils
-- package:
-    name: gnu-tar
+
+- name: "install gnu tools {{ item }}"
+  tags: ['gnu']
+  homebrew:
+    name: "{{ gnu_package }}"
+    state: present
+    install_options: "with-default-names,enable-debug"
+
+  loop: 
+    - bash-completion
+    - coreutils
+    - findutils
+    - gnu-tar
+    - gnu-sed
+  loop_control:
+    loop_var: gnu_package
 
 - name: "Defaults - dock autohide"
   tags: ["test"]
