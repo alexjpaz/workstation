@@ -18,7 +18,7 @@ git-replace() {
         fi
 
         set -x
-        git grep -l "$SEARCH" | xargs sed -i "s${SEPARATOR}${SEARCH}${SEPARATOR}${REPLACE}${SEPARATOR}"
+        git grep -l "$SEARCH" | xargs sed -i "s${SEPARATOR}${SEARCH}${SEPARATOR}${REPLACE}${SEPARATOR}g"
         set +x
         git status
     )
