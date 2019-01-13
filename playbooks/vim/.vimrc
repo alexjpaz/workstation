@@ -66,6 +66,7 @@ Plug 'fatih/vim-go'
 " Python
 Plug 'vim-scripts/indentpython.vim'
 Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'nvie/vim-flake8'
 
 " Other
 Plug 'Valloric/ListToggle'
