@@ -1,4 +1,15 @@
 ---
+- name: Install latest bash
+  tags: ['bashrc','test1']
+  package:
+    name: bash
+
+- name: Fix the user shell to use the latest bash (this may fail)
+  tags: ['bashrc','test1']
+  ignore_errors: yes
+  shell: "{{ playbook_dir }}/{{ item }}/fix-bash-shell.sh"
+
+
 - tags: ['bashrc']
   set_fact:
     task_dir: "{{ playbook_dir }}/{{ item }}"
