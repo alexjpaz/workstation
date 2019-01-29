@@ -1,0 +1,19 @@
+---
+- name: "react-native: node" 
+  tags: ['react-native']
+  when: isOSX == true
+  package:
+    name: node
+
+- name: "react-native: watchman"
+  tags: ['react-native']
+  when: isOSX == true
+  package:
+    name: watchman
+
+- name: "react-native-cli"
+  tags: ['react-native']
+  when: isOSX == true
+  npm:
+    name: react-native-cli
+    global: yes
