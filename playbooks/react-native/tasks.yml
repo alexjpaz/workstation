@@ -17,3 +17,28 @@
   npm:
     name: react-native-cli
     global: yes
+
+- name: "react-native android packages"
+  tags: ['react-native']
+  with_items:
+    - ant
+    - gradle
+    - maven
+  loop_control:
+    loop_var: "react_native_package"
+  package:
+    name: "{{ react_native_package }}"
+
+- name: "react-native android-sdk"
+  tags: ['react-native']
+  with_items:
+    - android-sdk
+    - android-ndk
+    - intel-haxm
+  loop_control:
+    loop_var: "package"
+  homebrew_cask:
+    name: "{{ package }}"
+    state: present
+
+# https://gist.github.com/patrickhammond/4ddbe49a67e5eb1b9c03
