@@ -39,6 +39,9 @@ Plug 'avakhov/vim-yaml'
 " Lint
 Plug 'w0rp/ale'
 
+" Tags
+Plug 'ludovicchabant/vim-gutentags'
+
 " Javascript
 Plug 'leafgarland/typescript-vim'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}

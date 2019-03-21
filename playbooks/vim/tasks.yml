@@ -3,6 +3,10 @@
   package:
     name: cmake
 
+- name: Install ctags for vim
+  package:
+    name: ctags
+
 - set_fact:
     task_dir: "{{ playbook_dir }}/{{ item }}"
 
