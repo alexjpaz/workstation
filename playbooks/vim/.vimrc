@@ -21,7 +21,7 @@ Plug 'gcmt/taboo.vim'
 Plug 'lepture/vim-velocity'
 Plug 'groenewege/vim-less'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 
 Plug 'gorodinskiy/vim-coloresque'
 
