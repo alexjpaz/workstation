@@ -81,6 +81,9 @@ Plug 'dracula/vim'
 Plug 'janko-m/vim-test'
 Plug 'tpope/vim-dispatch'
 
+" Nord
+Plug 'arcticicestudio/nord-vim'
+
 call plug#end()
 
 runtime macros/matchit.vim
