@@ -36,7 +36,7 @@
     src: ./bashrc
     dest: "~{{workstation_user}}/.bashrc"
 
-- name: Ensure .vim/plugin directories exist
+- name: "bashrc: Add managed bash.d files"
   tags: ['bashrc']
   file: 
     path: "~{{workstation_user}}/.bash.d/managed" 
