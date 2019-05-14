@@ -14,6 +14,7 @@
 
 - name: Install pass-otp (2)
   tags: ['pass']
+  ignore_errors: true
   shell: |
     git clone https://github.com/tadfisher/pass-otp /tmp/pass-otp
     cd /tmp/pass-otp

@@ -1,7 +1,8 @@
 ---
-- name: "install iterm2" 
+- name: "install iterm2"
   when: isOSX == true
   tags: ['terminal']
+  ignore_errors: yes
   homebrew_cask:
     name: iterm2
     state: present
