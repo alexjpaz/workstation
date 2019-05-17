@@ -16,4 +16,4 @@ ADD . /build
 WORKDIR /build
 RUN bootstrap/fedora
 
-ENTRYPOINT ["/build/test.sh"]
+ENTRYPOINT ["/build/test.py"]
