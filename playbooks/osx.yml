@@ -3,7 +3,7 @@
   vars:
     workstation_user: apaz
     isOSX: true
-    task_dirs: 
+    task_dirs:
       - osx
       - bashrc
       - eclipse

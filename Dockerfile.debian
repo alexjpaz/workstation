@@ -1,0 +1,16 @@
+FROM debian:latest
+
+RUN apt-get update
+RUN apt-get install -y \
+	git
+
+ARG WORKSTATION_USER
+
+RUN useradd -m -u 1000 datboi
+
+ADD . /build
+
+WORKDIR /build
+RUN bootstrap/debian
+
+ENTRYPOINT ["/build/test.sh"]
