@@ -13,4 +13,4 @@ ADD . /build
 WORKDIR /build
 RUN bootstrap/debian
 
-ENTRYPOINT ["/build/test.sh"]
+ENTRYPOINT ["/build/test.py"]
