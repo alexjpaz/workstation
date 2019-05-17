@@ -7,4 +7,5 @@ before_install:
   - docker info
 
 script:
-  - docker build -f Dockerfile.debian .
+  - docker build -f Dockerfile.debian -t alexjpaz.com/workstation:debian .
+  - docker run alexjpaz.com/workstation:debian
