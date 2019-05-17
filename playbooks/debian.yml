@@ -1,0 +1,11 @@
+--
+- hosts: all
+  vars:
+    workstation_user: apaz
+    isOSX: false
+    task_dirs:
+      - bashrc
+      - vim
+  tasks:
+    - include: "{{ item }}/tasks.yml"
+      with_items: "{{ task_dirs }}"
