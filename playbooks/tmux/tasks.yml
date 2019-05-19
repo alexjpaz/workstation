@@ -7,10 +7,18 @@
   package:
     name: tmux
     state: present
- 
 
-- name: configure tmux.conf
+- name: configure tmux.conf (OSX)
   tags: ['tmux']
+  when: isOSX == true
+  file:
+    src: "{{ task_dir }}/tmux.conf"
+    dest: "~{{workstation_user}}/.tmux.conf"
+    state: link
+
+- name: configure tmux.conf (Linux)
+  tags: ['tmux']
+  when: isLinux == true
   file:
     src: "{{ task_dir }}/tmux.conf"
     dest: "~{{workstation_user}}/.tmux.conf"
