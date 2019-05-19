@@ -6,6 +6,8 @@
     task_dirs:
       - bashrc
       - vim
+      - tmux
+      - git
   tasks:
     - include: "{{ item }}/tasks.yml"
       with_items: "{{ task_dirs }}"

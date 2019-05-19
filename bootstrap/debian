@@ -6,4 +6,10 @@ else
     apt-get install -y ansible
 fi
 
-ansible-playbook -i "localhost," -c local playbooks/debian.yml
+ansible-playbook \
+    -i "localhost," \
+    -c local playbooks/debian.yml \
+    --become \
+    --extra-args "workstation_user=$USER" \
+    $@
+
