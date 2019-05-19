@@ -3,11 +3,15 @@
   vars:
     workstation_user: apaz
     isOSX: false
+    isLinux: true
     task_dirs:
       - bashrc
       - vim
       - tmux
       - git
+      - editorconfig
+      - code.d
+      - node
   tasks:
     - include: "{{ item }}/tasks.yml"
       with_items: "{{ task_dirs }}"
