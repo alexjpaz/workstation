@@ -10,6 +10,6 @@ ansible-playbook \
     -i "localhost," \
     -c local playbooks/debian.yml \
     --become \
-    --extra-args "workstation_user=$USER" \
+    --extra-vars "workstation_user=$USER" \
     $@
 
