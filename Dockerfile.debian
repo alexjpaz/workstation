@@ -4,13 +4,18 @@ RUN apt-get update
 RUN apt-get install -y \
 	git
 
-ARG WORKSTATION_USER
+ARG WORKSTATION_USER="datboi"
+ENV WORKSTATION_USER=$WORKSTATION_USER
 
-RUN useradd -m -u 1000 datboi
+ARG BOOTSTRAP_ARGS
+
+
+RUN useradd -m -u 1000 $WORKSTATION_USER
 
 ADD . /build
 
 WORKDIR /build
-RUN bootstrap/debian
+
+RUN bootstrap/debian $BOOTSTRAP_ARGS
 
 ENTRYPOINT ["/build/test.py"]

@@ -1,4 +1,5 @@
 - name: Configure editorconfig
+  tags: ['editorconfig']
   copy:
     src: ./editorconfig
     dest: "~{{workstation_user}}/.editorconfig"
