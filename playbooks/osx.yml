@@ -12,6 +12,7 @@
       - vim
       - code.d
       - tmux
+      - fish
       - kubernetes
       - python
       - node

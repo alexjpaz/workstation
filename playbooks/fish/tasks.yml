@@ -1,0 +1,6 @@
+---
+- name: Install Fish because @dreae told me to
+  package:
+    name: fish
+
+
