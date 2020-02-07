@@ -50,6 +50,7 @@
     - c
     - http
     - dkr-fedora
+    - entr-git
   loop_control:
     loop_var: "bash_file"
   file: 

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+function entr-git() {
+    git ls-files | entr -crs $@
+}
+
+#vim:syntax=sh
