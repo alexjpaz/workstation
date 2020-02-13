@@ -1,9 +1,20 @@
+
+#
 # ** Guidelines **
 #
 # 50-character subject line
 #
 # 72-character wrapped longer description
 #
-# 
 # https://github.com/erlang/otp/wiki/Writing-good-commit-messages
 # https://chris.beams.io/posts/git-commit/
+#
+# ** Autolinking in GitHub
+# https://help.github.com/en/github/writing-on-github/autolinked-references-and-urls
+#
+# ** Co-Authoring **
+# https://help.github.com/en/github/committing-changes-to-your-project/creating-a-commit-with-multiple-authors
+#
+# Example:
+# Co-authored-by: @user <user@example.com>
+
