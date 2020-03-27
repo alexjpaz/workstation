@@ -2,12 +2,15 @@
 
 # Toggle microphone
 # osascript ./toggle-mic
+# Create an automator script
 # https://apple.stackexchange.com/questions/175215/how-do-i-assign-a-keyboard-shortcut-to-an-applescript-i-wrote
+# Add to touchbar
+# https://www.computerworld.com/article/3299299/mojave-how-to-make-automator-shortcuts-for-mbp-touch-bar.html
 
 set inputVolume to input volume of (get volume settings)
 if inputVolume = 0 then
     set inputVolume to 100
-    display notification "Microphone Toggle" with title "Mic ON 100% 🔴"
+    display notification "Microphone Toggle" with title "Mic ON 100% 🔴" with sound name "Bottle"
 else
     set inputVolume to 0
     display notification "Microphone Toggle" with title "Mic OFF 0% ⚪️"
