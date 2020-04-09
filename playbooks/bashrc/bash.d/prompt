@@ -22,6 +22,12 @@ function __prompt_get_random_prompt() {
     arr[11]=$(__prompt_wrap 5 'ʕ •ᴥ•ʔ')
     arr[12]=$(__prompt_wrap 5 '𝝿')
     arr[13]=$(__prompt_wrap 5 'ヽ(｀д´)ﾉ')
+    arr[14]=$(__prompt_wrap 5 'ᕦ(ò_óˇ)ᕤ')
+    arr[15]=$(__prompt_wrap 1 'ಠ益ಠ')
+    arr[16]=$(__prompt_wrap 4 'ᵔᴥᵔ')
+    arr[17]=$(__prompt_wrap 6 'ヅ')
+    arr[18]=$(__prompt_wrap 1 '(⋋▂⋌)')
+
     local p=${arr[$[$RANDOM % ${#arr[@]}]]}
     echo "$p"
 }
