@@ -5,7 +5,7 @@ function __prompt_wrap() {
     echo "\[$(tput setaf $color)\]$character \[$(tput sgr0)\]"
 }
 
-function __prompt_get_random_prompt() {
+function __prompt_get_prompt() {
     # https://cutekaomoji.com/animals/bears/
     local arr=()
     arr[0]=$(__prompt_wrap 5 $)
@@ -27,13 +27,24 @@ function __prompt_get_random_prompt() {
     arr[16]=$(__prompt_wrap 4 'ᵔᴥᵔ')
     arr[17]=$(__prompt_wrap 6 'ヅ')
     arr[18]=$(__prompt_wrap 1 '(⋋▂⋌)')
+    # NOTE - Be sure to change the random modulue below!
 
-    local p=${arr[$[$RANDOM % ${#arr[@]}]]}
+    local p=${arr[$1]}
     echo "$p"
+}
+
+function __prompt_get_random_prompt() {
+    local index=$[$RANDOM % 19]
+
+    echo "$(__prompt_get_prompt ${index})"
 }
 
 function __prompt_set_random_prompt() {
     PS1="$(__prompt_get_random_prompt)"
+}
+
+function __prompt_set_prompt() {
+    PS1="$(__prompt_get_prompt $1)"
 }
 
 if [[ -z $PS1 ]]; then
