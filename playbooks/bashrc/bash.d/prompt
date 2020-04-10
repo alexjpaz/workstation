@@ -47,10 +47,14 @@ function __prompt_set_prompt() {
     PS1="$(__prompt_get_prompt $1)"
 }
 
+function __prompt_hooks_after() {
+    tmux refresh-client -S &
+}
+
 if [[ -z $PS1 ]]; then
 	INTERACTIVE=nope
 else
-    PS1="$(__prompt_get_random_prompt)"
+    PS1="$(__prompt_get_random_prompt)\$(__prompt_hooks_after)"
 
     if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
         PS1="\[$(tput setaf 5)\]\h:\\$ \[$(tput sgr0)\]"
