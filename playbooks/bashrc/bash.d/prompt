@@ -48,7 +48,7 @@ function __prompt_set_prompt() {
 }
 
 function __prompt_hooks_after() {
-    tmux refresh-client -S &
+    tmux refresh-client -S &> /dev/null &
 }
 
 if [[ -z $PS1 ]]; then
