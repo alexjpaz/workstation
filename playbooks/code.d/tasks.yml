@@ -19,14 +19,6 @@
     dest: "~{{workstation_user}}/.opt/cody/"
     remote_src: yes
 
-- name: Add cody to path (Linux)
-  tags: ['cody']
-  when: isLinux == true
-  file:
-    src: "~{{workstation_user}}/.opt/cody/package/dist/cody-linux"
-    dest: "/usr/local/bin/cody"
-    state: link
-
 - name: Add cody to path (OSX)
   tags: ['cody']
   when: isOSX == true

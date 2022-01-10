@@ -16,7 +16,7 @@
 
 - name: Configure Vim
   file:
-    src: "{{ task_dir }}/.vimrc"
+    src: "{{ playbook_dir }}/{{ item }}/.vimrc"
     dest: "~{{workstation_user}}/.vimrc"
     state: link
 
@@ -43,6 +43,6 @@
 - name: Ensure Vim plugin directory exists
   tags: ['vim']
   file: 
-    src: "{{ task_dir }}/plugin/apaz"
+    src: "{{ playbook_dir }}/{{ item }}/plugin/apaz"
     dest: "~{{workstation_user}}/.vim/plugin/apaz"
     state: link
