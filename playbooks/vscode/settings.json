@@ -3,5 +3,7 @@
     "window.zoomLevel": 1,
     "terminal.integrated.shell.osx": "/usr/local/bin/tmux",
     "workbench.activityBar.visible": false,
-    "workbench.statusBar.feedback.visible": false
+    "workbench.statusBar.feedback.visible": false,
+    "editor.fontSize": 16,
+    "terminal.integrated.fontSize": 14
 }
