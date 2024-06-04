@@ -1,0 +1,6 @@
+#!/bin/bash
+
+git-set-user() {
+    git config user.name "Alexander Paz"
+    git config user.email "alexjpaz@gmail.com"
+}
