@@ -3,12 +3,12 @@
 	email = alexjpaz@users.noreply.github.com
 	signingkey = 0793FE7D
 [alias]
-	rbm = '!f() { default=$(git remote show origin | sed -n '/HEAD branch/s/.*: //p'); git rebase origin/$default; }; f
-	rbmi = '!f() { default=$(git remote show origin | sed -n '/HEAD branch/s/.*: //p'); git rebase -i origin/$default; }; f
+	rbm = "!f() { default=$(git remote show origin | sed -n '/HEAD branch/s/.*: //p'); git rebase origin/$default; }; f"
+	rbmi = "!f() { default=$(git remote show origin | sed -n '/HEAD branch/s/.*: //p'); git rebase -i origin/$default; }; f"
 	dw = diff HEAD --word-diff=color	
 	swd = show --word-diff=color
 	rhom = "!f() { default=$(git remote show origin | sed -n '/HEAD branch/s/.*: //p'); git reset --hard origin/$default; }; f"
-	add-non-white-space = !sh -c 'git diff -U0 -w --no-color -- \"$@\" | git apply --cached --ignore-whitespace --unidiff-zero "#"'
+	add-non-white-space = "!sh -c 'git diff -U0 -w --no-color -- \"$@\" | git apply --cached --ignore-whitespace --unidiff-zero \"#\"'"
 	co = checkout
 	st = status
 	f = !git forest
